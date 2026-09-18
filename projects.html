@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Projets — Chantal Kamin Kanund | Informatique, Réseaux & Cybersécurité</title>
+  <meta name="description" content="Découvrez les projets de Chantal Kamin Kanund : application C# pour la RVA, système IoT de surveillance de l'eau, projet Nikukatil, SafeDrive RDC et bien plus." />
+  <meta name="author" content="Chantal Kamin Kanund" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projets — Chantal Kamin Kanund" />
+  <meta property="og:description" content="Projets informatiques et entrepreneuriaux de Chantal Kamin Kanund — étudiante en Master 1 Informatique, Kinshasa, RDC." />
+  <meta property="og:type" content="website" />
+
+  <!-- Feuille de style partagée -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Styles spécifiques à cette page -->
+  <style>
+    /* ── En-tête de page ── */
+    .page-hero {
+      padding: 10rem 2rem 5rem;
+      background-color: var(--fond-creme);
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: -0.03em;
+      margin-top: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .page-hero p {
+      max-width: 540px;
+      margin-inline: auto;
+      font-size: 1.0625rem;
+    }
+
+    /* ── Section projets ── */
+    .page-projets {
+      padding: var(--section-pad);
+      background-color: var(--fond-blanc);
+    }
+
+    /* Filtres */
+    .filtres {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .filtre-btn {
+      font-family: var(--police-corps);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--texte-doux);
+      background: transparent;
+      border: 1.5px solid var(--bordure);
+      border-radius: 4px;
+      padding: 8px 18px;
+      cursor: pointer;
+      transition: border-color var(--transition-rapide), color var(--transition-rapide), background-color var(--transition-rapide);
+    }
+    .filtre-btn:hover,
+    .filtre-btn.actif {
+      border-color: var(--accent);
+      color: var(--accent);
+      background-color: rgba(255, 107, 91, 0.06);
+    }
+
+    /* Grille — 3 colonnes max */
+    .projects-grid-lg {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .projects-grid-lg { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    }
+    @media (min-width: 1024px) {
+      .projects-grid-lg { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Carte étendue */
+    .carte-projet-lg {
+      background-color: var(--fond-creme);
+      border-radius: var(--rayon-carte);
+      overflow: hidden;
+      border: 1px solid var(--bordure);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .carte-projet-lg:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+    }
+    .carte-projet-lg .carte-contenu {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .carte-projet-lg .carte-desc { flex: 1; }
+
+    /* Badges technos */
+    .carte-techs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+    .tech-badge {
+      font-size: 0.6875rem;
+      color: var(--texte-doux);
+      background-color: var(--fond-blanc);
+      border: 1px solid var(--bordure);
+      border-radius: 3px;
+      padding: 3px 8px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Carte sans image — fond coloré */
+    .carte-no-img {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      background: linear-gradient(135deg, rgba(255,107,91,0.08) 0%, rgba(255,107,91,0.02) 100%);
+      border-bottom: 1px solid var(--bordure);
+    }
+
+    /* Section CTA bas de page */
+    .section-retour {
+      padding: 5rem 2rem;
+      background-color: var(--fond-creme);
+      text-align: center;
+    }
+    .section-retour h2 {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      margin-bottom: 1rem;
+    }
+    .section-retour p {
+      max-width: 440px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
+    .retour-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- En-tête sticky -->
+  <header id="entete" role="banner">
+    <div class="entete-inner">
+
+      <a href="index.html" class="logo" aria-label="Chantal Kamin Kanund — retour à l'accueil">
+        Chantal<span class="logo-point">.</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <a href="index.html#accueil"     class="lien-nav">Accueil</a>
+        <a href="index.html#apropos"     class="lien-nav">À propos</a>
+        <a href="index.html#competences" class="lien-nav">Compétences</a>
+        <a href="projects.html"          class="lien-nav" aria-current="page">Projets</a>
+        <a href="index.html#contact"     class="btn-cta">Me contacter</a>
+      </nav>
+
+      <button
+        id="btn-burger"
+        class="btn-burger"
+        aria-expanded="false"
+        aria-controls="menu-mobile"
+        aria-label="Ouvrir le menu de navigation"
+      >
+        <span class="burger-barre barre-1"></span>
+        <span class="burger-barre barre-2"></span>
+        <span class="burger-barre barre-3"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div id="menu-mobile" class="menu-mobile" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+    <nav class="menu-mobile-nav" aria-label="Navigation mobile">
+      <a href="index.html#accueil"     class="lien-mobile" tabindex="-1">Accueil</a>
+      <a href="index.html#apropos"     class="lien-mobile" tabindex="-1">À propos</a>
+      <a href="index.html#competences" class="lien-mobile" tabindex="-1">Compétences</a>
+      <a href="projects.html"          class="lien-mobile" tabindex="-1">Projets</a>
+      <a href="index.html#contact"     class="lien-mobile btn-cta btn-cta-mobile" tabindex="-1">Me contacter</a>
+    </nav>
+  </div>
+
+  <!-- Contenu principal -->
+  <main id="contenu-principal">
+
+    <!-- ── En-tête page Projets ── -->
+    <section class="page-hero" aria-labelledby="titre-page-projets">
+      <div class="conteneur">
+        <span class="surtitre">Réalisations & projets</span>
+        <h1 id="titre-page-projets">Mes projets</h1>
+        <p>
+          Projets académiques, professionnels et entrepreneuriaux réalisés
+          au fil de mon parcours en informatique à Kinshasa, RDC.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Grille de projets ── -->
+    <section class="page-projets" aria-labelledby="titre-tous-projets">
+      <div class="conteneur">
+
+        <h2 id="titre-tous-projets" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Tous les projets</h2>
+
+        <!-- Filtres -->
+        <div class="filtres" role="group" aria-label="Filtrer par catégorie">
+          <button class="filtre-btn actif" data-filtre="tous"          aria-pressed="true">Tous</button>
+          <button class="filtre-btn"       data-filtre="professionnel" aria-pressed="false">Professionnel</button>
+          <button class="filtre-btn"       data-filtre="academique"    aria-pressed="false">Académique</button>
+          <button class="filtre-btn"       data-filtre="entrepreneuriat" aria-pressed="false">Entrepreneuriat</button>
+          <button class="filtre-btn"       data-filtre="innovation"    aria-pressed="false">Innovation</button>
+        </div>
+
+        <!-- Grille -->
+        <div class="projects-grid-lg">
+
+          <!-- ── PROJET 1 : RVA ── -->
+          <article id="rva" class="carte-projet carte-projet-lg" data-categorie="professionnel">
+            <div class="carte-img-wrapper">
+              <img
+                src="assets/images/app-gvisite.jpg"
+                alt="Application de gestion des visites développée pour la Régie des Voies Aériennes"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+              <span class="carte-annee">2026</span>
+            </div>
+            <div class="carte-contenu">
+              <span class="carte-tag">Stage · Application de gestion</span>
+              <h2 class="carte-titre">Application de gestion des visites — RVA</h2>
+              <p class="carte-desc">
+                Conception et réalisation d'une application informatique pour la
+                <strong>Régie des Voies Aériennes</strong> (bureau informatique),
+                destinée à faciliter la gestion et le suivi des visites.
+                Stage effectué de février à avril 2026.
+              </p>
+              <div class="carte-techs">
+                <span class="tech-badge">C# / C Sharp</span>
+                <span class="tech-badge">SQL</span>
+                <span class="tech-badge">Gestion des données</span>
+                <span class="tech-badge">Conception d'application</span>
+              </div>
+              <a href="index.html#contact" class="carte-lien" aria-label="Me contacter à propos du projet RVA">
+                Me contacter <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!--PROJET 2 : Système IoT Eau  -->
+          <article id="eau" class="carte-projet carte-projet-lg" data-categorie="academique">
+            <div class="carte-img-wrapper">
+              <img
+                src="assets/images/projet-maquette-iot-eau.jpeg"
+                alt="Schéma du système IoT de surveillance en temps réel de la qualité de l'eau"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+              <span class="carte-annee">2026</span>
+            </div>
+            <div class="carte-contenu">
+              <span class="carte-tag">Projet de fin d'année · IoT</span>
+              <h2 class="carte-titre">Système IoT — Surveillance de la qualité de l'eau</h2>
+              <p class="carte-desc">
+                Système intelligent basé sur l'<strong>Internet des Objets (IoT)</strong>
+                destiné à assurer la surveillance en temps réel de la qualité
+                de l'eau distribuée aux ménages. Centralisation des données,
+                suivi des paramètres et exploitation des informations.
+              </p>
+              <div class="carte-techs">
+                <span class="tech-badge">IoT</span>
+                <span class="tech-badge">Capteurs connectés</span>
+                <span class="tech-badge">Bases de données</span>
+                <span class="tech-badge">Surveillance temps réel</span>
+                <span class="tech-badge">Gestion des données</span>
+              </div>
+              <a href="index.html#contact" class="carte-lien" aria-label="Me contacter à propos du projet IoT Eau">
+                Me contacter <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJET 3 : Nikukatil -->
+          <article id="nikukatil" class="carte-projet carte-projet-lg" data-categorie="entrepreneuriat">
+            <div class="carte-img-wrapper">
+              <img
+                src="assets/images/app-gestion-stock.jpg"
+                alt="Projet Nikukatil — gestion de stock et vente de parfums"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+              <span class="carte-annee">2025</span>
+            </div>
+            <div class="carte-contenu">
+              <span class="carte-tag">Entrepreneuriat · Commerce</span>
+              <h2 class="carte-titre">Nikukatil — Gestion de stock &amp; vente de parfums</h2>
+              <p class="carte-desc">
+                Projet entrepreneurial et informatique autour de mon activité de
+                vente de parfums. Gestion du stock, suivi des produits, entrées
+                et sorties, et amélioration de la prise de décision grâce à
+                une meilleure organisation des informations.
+              </p>
+              <div class="carte-techs">
+                <span class="tech-badge">Gestion de stock</span>
+                <span class="tech-badge">Gestion des données</span>
+                <span class="tech-badge">Commerce</span>
+                <span class="tech-badge">Entrepreneuriat</span>
+                <span class="tech-badge">Gestion de projet</span>
+              </div>
+              <a href="index.html#contact" class="carte-lien" aria-label="Me contacter à propos du projet Nikukatil">
+                Me contacter <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJET 4 : SafeDrive RDC  -->
+          <article id="safedrive" class="carte-projet carte-projet-lg" data-categorie="innovation">
+            
+              <img
+                src="assets/images/projet-safedrive-boite-noir.jpeg"
+                alt="Projet SafeDrive RDC — système de surveillance du transport"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+            <div class="carte-contenu">
+              <span class="carte-tag" style="margin-top:1.75rem;">Innovation · Transport &amp; Sécurité</span>
+              <h2 class="carte-titre">SafeDrive RDC</h2>
+              <p class="carte-desc">
+                Projet conceptuel utilisant les technologies numériques pour
+                améliorer la sécurité et la traçabilité dans le secteur du
+                transport en République démocratique du Congo.
+                Suivi intelligent des véhicules, boîte noire, enregistrement
+                des incidents.
+              </p>
+              <div class="carte-techs">
+                <span class="tech-badge">Technologie numérique</span>
+                <span class="tech-badge">Suivi GPS</span>
+                <span class="tech-badge">Sécurité</span>
+                <span class="tech-badge">Innovation RDC</span>
+              </div>
+              <a href="index.html#contact" class="carte-lien" aria-label="Me contacter à propos de SafeDrive RDC">
+                Me contacter <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ── PROJET 5 : Alternatives au plastique ── -->
+          <article class="carte-projet carte-projet-lg" data-categorie="innovation">
+            <img
+                src="assets/images/papier-kraft.jpeg"
+                alt="Papier kraft utilisé comme alternative écologique au plastique"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+            <div class="carte-contenu">
+              <span class="carte-tag" style="margin-top:1.75rem;">Innovation · Environnement</span>
+              <h2 class="carte-titre">Alternatives au plastique</h2>
+              <p class="carte-desc">
+                Projet de recherche portant sur des solutions d'emballage
+                alternatives, notamment à travers l'utilisation du papier kraft,
+                pour réduire l'utilisation du plastique et répondre aux
+                problématiques environnementales locales.
+              </p>
+              <div class="carte-techs">
+                <span class="tech-badge">Innovation</span>
+                <span class="tech-badge">Environnement</span>
+                <span class="tech-badge">Recherche</span>
+                <span class="tech-badge">Entrepreneuriat</span>
+              </div>
+              <a href="index.html#contact" class="carte-lien" aria-label="Me contacter à propos du projet Alternatives au plastique">
+                Me contacter <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ── PROJET 6 : Technologie au service des femmes ── -->
+          <article class="carte-projet carte-projet-lg" data-categorie="innovation">
+            
+             <img
+                src="assets/images/elleckamin.jpeg"
+                alt="Projet LARUKONKISH Technologie au service des femmes"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+            <div class="carte-contenu">
+              <span class="carte-tag" style="margin-top:1.75rem;">Impact social · Technologie</span>
+              <h2 class="carte-titre">Technologie au service des femmes</h2>
+              <p class="carte-desc">
+                Projet de réflexion autour d'une solution numérique destinée
+                à centraliser des ressources d'information et de sensibilisation
+                pour faciliter l'accès des femmes à des informations utiles,
+                dans une logique d'autonomisation et d'éducation.
+              </p>
+              <div class="carte-techs">
+                <span class="tech-badge">Impact social</span>
+                <span class="tech-badge">Innovation</span>
+                <span class="tech-badge">Éducation</span>
+                <span class="tech-badge">Entrepreneuriat</span>
+              </div>
+              <a href="index.html#contact" class="carte-lien" aria-label="Me contacter à propos du projet Technologie au service des femmes">
+                Me contacter <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Section CTA bas ── -->
+    <section class="section-retour" aria-label="Me contacter">
+      <div class="conteneur">
+        <span class="surtitre">Collaboration</span>
+        <h2>Un projet en tête ?</h2>
+        <p>
+          Je suis disponible pour des stages, des opportunités professionnelles
+          et des projets innovants en informatique et en entrepreneuriat.
+        </p>
+        <div class="retour-btns">
+          <a href="index.html#contact" class="btn-cta">Me contacter</a>
+          <a href="index.html"         class="btn-outline">← Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="pied-de-page" role="contentinfo">
+    <div class="conteneur pied-inner">
+
+      <a href="index.html" class="pied-logo" aria-label="Chantal Kamin Kanund — retour à l'accueil">
+        Chantal<span class="logo-point">.</span>
+      </a>
+
+      <nav class="pied-nav" aria-label="Navigation pied de page">
+        <a href="index.html#accueil"     class="lien-pied">Accueil</a>
+        <a href="index.html#apropos"     class="lien-pied">À propos</a>
+        <a href="index.html#competences" class="lien-pied">Compétences</a>
+        <a href="projects.html"          class="lien-pied">Projets</a>
+        <a href="index.html#contact"     class="lien-pied">Contact</a>
+      </nav>
+
+      <div class="reseaux" aria-label="Réseaux sociaux">
+        <a href="mailto:Shantykanund@gmail.com" class="reseau-lien" aria-label="Envoyer un e-mail à Chantal">E-mail</a>
+        <a href="#"                             class="reseau-lien" aria-label="LinkedIn — à ajouter">LinkedIn</a>
+        <a href="https://github.com/shantykanund-ui" class="reseau-lien" target="_blank" rel="noopener noreferrer" aria-label="Voir le profil GitHub de Chantal">GitHub</a>
+      </div>
+
+      <p class="pied-copyright">
+        © 2026 Chantal Kamin Kanund · Apprendre. Innover. Construire.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Script partagé (burger + scroll) -->
+  <script src="js/app.js" defer></script>
+
+  <!-- Filtres projets (spécifique à cette page) -->
+  <script>
+    (function initFiltres() {
+      var boutons = document.querySelectorAll('.filtre-btn');
+      var cartes  = document.querySelectorAll('.carte-projet-lg');
+
+      boutons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          boutons.forEach(function(b) {
+            b.classList.remove('actif');
+            b.setAttribute('aria-pressed', 'false');
+          });
+          btn.classList.add('actif');
+          btn.setAttribute('aria-pressed', 'true');
+
+          var filtre = btn.getAttribute('data-filtre');
+          cartes.forEach(function(carte) {
+            if (filtre === 'tous' || carte.getAttribute('data-categorie') === filtre) {
+              carte.style.display = '';
+            } else {
+              carte.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

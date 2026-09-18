@@ -1,0 +1,11 @@
+Ce dossier contient les images et le CV utilisés par le site.
+
+Fichiers presents :
+- moi-1.jpeg, article-sur-moi.jpeg : photos personnelles
+- app-gvisite.png, app-gestion-stock.png, projet-maquette-iot-eau.jpeg,
+  projet-safedrive-boite-noir.jpeg, papier-kraft.jpeg, elleckamin.jpeg :
+  visuels des projets presentes sur le site
+- CV_Chantal_Kamin.pdf : CV telechargeable depuis la section "A propos"
+
+Tous les noms de fichiers sont en minuscules, sans espace, pour eviter
+les erreurs de chemin dans le code.

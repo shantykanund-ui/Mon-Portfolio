@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Chantal Kamin Kanund — Master 1 Informatique | Réseaux & Cybersécurité</title>
+  <meta name="description" content="Portfolio de Chantal Kamin Kanund, étudiante en Master 1 Informatique, titulaire d'une Licence obtenue à 90 % — major de promotion. Spécialisée en réseaux informatiques et cybersécurité, basée à Kinshasa, RDC." />
+  <meta name="author" content="Chantal Kamin Kanund" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chantal Kamin Kanund — Réseaux & Cybersécurité" />
+  <meta property="og:description" content="Portfolio de Chantal Kamin Kanund, major de promotion en Licence Informatique (90 %), actuellement en Master 1." />
+  <meta property="og:type" content="website" />
+
+  <!-- Feuille de style -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 
+       EN-TÊTE STICKY
+  -->
+  <header id="entete" role="banner">
+    <div class="entete-inner">
+
+      <!-- Logo -->
+      <a href="#accueil" class="logo" aria-label="Chantal Kamin Kanund — retour à l'accueil">
+        Chantal<span class="logo-point">.</span>
+      </a>
+
+      <!-- Navigation desktop -->
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <a href="#accueil"     class="lien-nav">Accueil</a>
+        <a href="#apropos"     class="lien-nav">À propos</a>
+        <a href="#competences" class="lien-nav">Compétences</a>
+        <a href="#projets"     class="lien-nav">Projets</a>
+        <a href="#contact"     class="btn-cta">Me contacter</a>
+      </nav>
+
+      <!-- Bouton burger (mobile) -->
+      <button
+        id="btn-burger"
+        class="btn-burger"
+        aria-expanded="false"
+        aria-controls="menu-mobile"
+        aria-label="Ouvrir le menu de navigation"
+      >
+        <span class="burger-barre barre-1"></span>
+        <span class="burger-barre barre-2"></span>
+        <span class="burger-barre barre-3"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- 
+       MENU MOBILE — overlay plein écran
+   -->
+  <div id="menu-mobile" class="menu-mobile" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+    <nav class="menu-mobile-nav" aria-label="Navigation mobile">
+      <a href="#accueil"     class="lien-mobile" tabindex="-1">Accueil</a>
+      <a href="#apropos"     class="lien-mobile" tabindex="-1">À propos</a>
+      <a href="#competences" class="lien-mobile" tabindex="-1">Compétences</a>
+      <a href="#projets"     class="lien-mobile" tabindex="-1">Projets</a>
+      <a href="#contact"     class="lien-mobile btn-cta btn-cta-mobile" tabindex="-1">Me contacter</a>
+    </nav>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CONTENU PRINCIPAL
+  ═══════════════════════════════════════════════════════════ -->
+  <main id="contenu-principal">
+
+    <!-- ─────────────────────────────────────────────────────────
+         SECTION HERO
+    ───────────────────────────────────────────────────────── -->
+    <section id="accueil" class="section-hero" aria-labelledby="hero-titre">
+      <div class="conteneur">
+        <div class="hero-grid">
+
+          <!-- Texte -->
+          <div class="hero-texte">
+            <span class="surtitre">Master 1 Informatique · Réseaux &amp; Cybersécurité</span>
+
+            <h1 id="hero-titre" class="hero-titre">
+              Construire des solutions<br>
+              grâce à la <em class="accent-italique">technologie</em>.
+            </h1>
+
+            <p class="hero-intro">
+              Titulaire d'une Licence en Informatique obtenue avec <strong>90 %</strong> —
+              <strong>major de promotion</strong> — je poursuis mes études en Master 1
+              avec pour objectif de me spécialiser dans les réseaux et la cybersécurité.
+              Basée à Kinshasa, RDC.
+            </p>
+
+            <div class="hero-cta-groupe">
+              <a href="#projets" class="btn-cta">Voir mes projets</a>
+              <a href="#contact" class="btn-outline">Me contacter</a>
+            </div>
+
+            <!-- Chiffres clés -->
+            <div class="hero-chiffres" aria-label="Quelques chiffres clés">
+              <div>
+                <span class="chiffre-val">90 %</span>
+                <span class="chiffre-label">Licence Informatique</span>
+              </div>
+              <div>
+                <span class="chiffre-val">🏆</span>
+                <span class="chiffre-label">Major de promotion</span>
+              </div>
+              <div>
+                <span class="chiffre-val">M1</span>
+                <span class="chiffre-label">En cours — 2026/2027</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne photo (desktop) -->
+          <div class="hero-img-col" aria-hidden="true">
+            <div class="hero-cercle-deco"></div>
+            <img
+              src="assets/images/moi-1.jpeg"
+              alt="Portrait de Chantal Kamin Kanund"
+              class="hero-photo"
+              width="480"
+              height="600"
+            />
+            <!-- Pastille statut -->
+            <div class="pastille-disponible">
+              <div class="pastille-statut">
+                <span class="point-vert"></span>
+                <span class="pastille-label-statut">Disponible</span>
+              </div>
+              <p class="pastille-date">Stages &amp; opportunités</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--
+         SECTION À PROPOS
+   -->
+    <section id="apropos" class="section-apropos" aria-labelledby="titre-apropos">
+      <div class="conteneur">
+        <div class="about-grid">
+
+          <!-- Photo -->
+          <div class="about-img-col">
+            <img
+              src="assets/images/article-sur-moi.jpeg"
+              alt="Chantal Kamin Kanund travaillant sur un projet informatique"
+              class="about-photo"
+              width="480"
+              height="600"
+            />
+            <!-- Badge diplôme -->
+            <div class="badge-exp" aria-hidden="true">
+              <span class="badge-chiffre">90%</span>
+              <span class="badge-texte">major de promo</span>
+            </div>
+          </div>
+
+          <!-- Texte -->
+          <div class="about-texte">
+            <span class="surtitre">À propos</span>
+            <h2 id="titre-apropos">Un parcours ancré dans la curiosité et la rigueur.</h2>
+
+            <p>
+              Mon parcours a commencé dans le domaine de l'électronique industrielle,
+              avant de m'orienter vers l'informatique — un choix qui s'est révélé être
+              une véritable passion. J'ai obtenu ma <strong>Licence en Informatique
+              avec 90 %, en étant major de ma promotion</strong> à Leadership Academia
+              University (2023–2026).
+            </p>
+            <p>
+              Mes formations complémentaires auprès de <strong>Cisco Networking
+              Academy</strong> et dans le domaine du <strong>Cloud Computing avec
+              AWS</strong> m'ont permis d'élargir mes compétences au-delà du cursus
+              universitaire. J'ai également mis mes connaissances en pratique lors
+              d'un stage à la <strong>Régie des Voies Aériennes (RVA)</strong>,
+              où j'ai conçu une application de gestion des visites en C# et SQL.
+            </p>
+            <p>
+              En parallèle, je développe des projets entrepreneuriaux et technologiques,
+              notamment <strong>Nikukatil</strong> (gestion de stock et vente de
+              parfums) et un <strong>système IoT de surveillance de la qualité
+              de l'eau</strong>. Je m'intéresse à l'innovation, à l'entrepreneuriat
+              et aux solutions qui répondent à des problèmes concrets.
+            </p>
+
+            <!-- Tags -->
+            <ul class="tags-liste" aria-label="Domaines de compétence">
+              <li>Réseaux informatiques</li>
+              <li>Cybersécurité</li>
+              <li>C# / SQL</li>
+              <li>Cloud AWS</li>
+              <li>IoT</li>
+              <li>Cisco</li>
+              <li>Gestion de projet</li>
+              <li>Entrepreneuriat</li>
+            </ul>
+
+            <a href="assets/images/CV_Chantal_Kamin.pdf" class="btn-outline btn-cv" download>
+              Télécharger mon CV (PDF)
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    
+    <section id="competences" class="section-apropos" aria-labelledby="titre-competences">
+      <div class="conteneur">
+
+        <div class="section-entete">
+          <span class="surtitre">Compétences</span>
+          <h2 id="titre-competences">Ce que je maîtrise.</h2>
+        </div>
+
+        <div class="skills-colonnes">
+
+          <!-- Colonne 1 -->
+          <div class="skills-colonne">
+            <h3 class="skills-colonne-titre">Réseaux &amp; Cybersécurité</h3>
+
+            <div class="skills-groupe">
+              <h4 class="skills-groupe-titre"> Réseaux informatiques</h4>
+              <ul class="skills-liste">
+                <li>Architecture réseau &amp; modèle OSI</li>
+                <li>TCP/IP · Adressage IPv4</li>
+                <li>Subnetting / sous-réseaux</li>
+                <li>LAN / WAN · Protocoles réseau</li>
+                <li>Notions de routage &amp; commutation</li>
+                <li>Dépannage réseau</li>
+                <li>Technologies Cisco</li>
+              </ul>
+            </div>
+
+            <div class="skills-groupe">
+              <h4 class="skills-groupe-titre">Cybersécurité</h4>
+              <ul class="skills-liste">
+                <li>Fondamentaux de la cybersécurité</li>
+                <li>Sécurité des réseaux</li>
+                <li>Menaces &amp; vulnérabilités</li>
+                <li>Protection des systèmes</li>
+                <li>Sécurité des données</li>
+                <li>IoT Security</li>
+              </ul>
+            </div>
+
+            <div class="skills-groupe">
+              <h4 class="skills-groupe-titre">Cloud &amp; IoT</h4>
+              <ul class="skills-liste">
+                <li>AWS Cloud Computing Fundamentals</li>
+                <li>Infrastructure &amp; services cloud</li>
+                <li>Fondamentaux de l'IoT</li>
+                <li>Objets connectés &amp; réseaux IoT</li>
+                <li>Sécurité des objets connectés</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Colonne 2 -->
+          <div class="skills-colonne">
+            <h3 class="skills-colonne-titre">Programmation &amp; Gestion</h3>
+
+            <div class="skills-groupe">
+              <h4 class="skills-groupe-titre"> Programmation</h4>
+              <ul class="skills-liste">
+                <li>C# / C Sharp</li>
+                <li>Conception d'applications</li>
+                <li>Logique de programmation</li>
+                <li>Développement de solutions informatiques</li>
+                <li>Résolution de problèmes</li>
+                <li>Algorithmique</li>
+              </ul>
+            </div>
+
+            <div class="skills-groupe">
+              <h4 class="skills-groupe-titre"> Bases de données &amp; SQL</h4>
+              <ul class="skills-liste">
+                <li>SQL</li>
+                <li>Conception de bases de données</li>
+                <li>Gestion &amp; organisation des données</li>
+                <li>Manipulation des données</li>
+                <li>Intégration dans une application</li>
+              </ul>
+            </div>
+
+            <div class="skills-groupe">
+              <h4 class="skills-groupe-titre"> Outils &amp; Gestion de projet</h4>
+              <ul class="skills-liste">
+                <li>Microsoft Office</li>
+                <li>Analyse des besoins</li>
+                <li>Organisation &amp; planification</li>
+                <li>Documentation technique</li>
+                <li>Travail en équipe</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+         SECTION PROJETS (aperçu)
+     -->
+    <section id="projets" class="section-projets" aria-labelledby="titre-projets">
+      <div class="conteneur">
+
+        <div class="projets-entete">
+          <div>
+            <span class="surtitre">Projets</span>
+            <h2 id="titre-projets">Mes réalisations.</h2>
+          </div>
+          <a href="projects.html" class="btn-outline">Voir tous les projets →</a>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- — RVA -->
+          <article class="carte-projet">
+            <div class="carte-img-wrapper">
+              <img
+                src="assets/images/app-gvisite.jpg"
+                alt="Application de gestion des visites développée pour la Régie des Voies Aériennes"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+              <span class="carte-annee">2026</span>
+            </div>
+            <div class="carte-contenu">
+              <span class="carte-tag">Stage · Application C# / SQL</span>
+              <h3 class="carte-titre">Application de gestion des visites — RVA</h3>
+              <p class="carte-desc">
+                Conception et réalisation d'une application de gestion et de suivi
+                des visites pour la Régie des Voies Aériennes, en C# et SQL.
+              </p>
+              <a href="projects.html#rva" class="carte-lien" aria-label="Voir le détail du projet RVA">
+                Voir le projet <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- — Nikukatil -->
+          <article class="carte-projet">
+            <div class="carte-img-wrapper">
+              <img
+                src="assets/images/app-gestion-stock.jpg"
+                alt="Interface de gestion de stock du projet Nikukatil — vente de parfums"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+              <span class="carte-annee">2025</span>
+            </div>
+            <div class="carte-contenu">
+              <span class="carte-tag">Entrepreneuriat · Gestion de stock</span>
+              <h3 class="carte-titre">Nikukatil — Gestion de stock &amp; vente de parfums</h3>
+              <p class="carte-desc">
+                Projet entrepreneurial portant sur la gestion de stock, le suivi
+                des produits et la gestion de l'activité de vente de parfums.
+              </p>
+              <a href="projects.html#nikukatil" class="carte-lien" aria-label="Voir le détail du projet Nikukatil">
+                Voir le projet <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- — Eau IoT -->
+          <article class="carte-projet">
+            <div class="carte-img-wrapper">
+              <img
+                src="assets/images/projet-maquette-iot-eau.jpeg"
+                alt="Schéma du système IoT de surveillance de la qualité de l'eau"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+              <span class="carte-annee">2026</span>
+            </div>
+            <div class="carte-contenu">
+              <span class="carte-tag">Projet de fin d'année · IoT</span>
+              <h3 class="carte-titre">Système IoT — Surveillance qualité de l'eau</h3>
+              <p class="carte-desc">
+                Système intelligent basé sur l'IoT destiné à assurer la surveillance
+                en temps réel de la qualité de l'eau distribuée aux ménages.
+              </p>
+              <a href="projects.html#eau" class="carte-lien" aria-label="Voir le détail du projet IoT Eau">
+                Voir le projet <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!--  SafeDrive RDC -->
+          <article class="carte-projet">
+            <div class="carte-img-wrapper">
+              <img
+                src="assets/images/projet-safedrive-boite-noir.jpeg"
+                alt="Boîtier SafeDrive RDC pour le suivi et la sécurité des véhicules"
+                class="carte-img"
+                width="600"
+                height="440"
+                loading="lazy"
+              />
+
+              <span class="carte-annee">2025</span>
+            </div>
+            <div class="carte-contenu">
+              <span class="carte-tag">Technologie · Transport &amp; Sécurité</span>
+              <h3 class="carte-titre">SafeDrive RDC</h3>
+              <p class="carte-desc">
+                Projet conceptuel utilisant les technologies numériques pour améliorer
+                la sécurité et la traçabilité dans le secteur du transport en RDC.
+              </p>
+              <a href="projects.html#safedrive" class="carte-lien" aria-label="Voir le détail du projet SafeDrive RDC">
+                Voir le projet <span class="fleche-projet" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────
+         SECTION CONTACT
+    ───────────────────────────────────────────────────────── -->
+    <section id="contact" class="section-contact" aria-labelledby="titre-contact">
+      <div class="conteneur">
+        <div class="contact-grid">
+
+          <!-- Informations -->
+          <div class="contact-infos">
+            <span class="surtitre">Contact</span>
+            <h2 id="titre-contact">Travaillons ensemble.</h2>
+            <p>
+              Vous souhaitez échanger autour d'un projet, d'une opportunité ou
+              d'une collaboration ? N'hésitez pas à me contacter, je réponds
+              dans les meilleurs délais.
+            </p>
+
+            <dl class="contact-coords">
+              <div class="coord-ligne">
+                <dt class="coord-terme">E-mail</dt>
+                <dd>
+                  <a href="mailto:Shantykanund@gmail.com" class="coord-lien">
+                    Shantykanund@gmail.com
+                  </a>
+                </dd>
+              </div>
+              <div class="coord-ligne">
+                <dt class="coord-terme">Localisation</dt>
+                <dd>Kinshasa, République démocratique du Congo</dd>
+              </div>
+              <div class="coord-ligne">
+                <dt class="coord-terme">LinkedIn</dt>
+                <dd>
+                  <a href="#contact" class="coord-lien" aria-label="LinkedIn — à ajouter">
+                    À ajouter
+                  </a>
+                </dd>
+              </div>
+              <div class="coord-ligne">
+                <dt class="coord-terme">GitHub</dt>
+                <dd>
+                  <a href="https://github.com/shantykanund-ui" class="coord-lien" target="_blank" rel="noopener noreferrer" aria-label="Voir le profil GitHub de Chantal">
+                    github.com/shantykanund-ui
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
+            <!-- Opportunités -->
+            <div style="margin-top: 2.5rem;">
+              <p style="font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem; font-family:var(--police-corps);">Je recherche</p>
+              <ul class="tags-liste" aria-label="Types d'opportunités recherchées">
+                <li>Stages en informatique</li>
+                <li>Réseaux &amp; Cybersécurité</li>
+                <li>Infrastructures IT</li>
+                <li>Cloud Computing</li>
+                <li>Projets IoT</li>
+                <li>Programmes internationaux</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Formulaire -->
+          <div>
+            <form
+              id="form-contact"
+              class="form-contact"
+              novalidate
+              aria-label="Formulaire de contact"
+            >
+
+              <!-- Champ Nom -->
+              <div class="form-champ">
+                <label for="champ-nom" class="form-label">
+                  Votre nom <span class="requis" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="champ-nom"
+                  name="nom"
+                  class="form-input"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-invalid="false"
+                  placeholder="Jean Dupont"
+                />
+                <span id="err-nom" class="form-erreur" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Champ E-mail -->
+              <div class="form-champ">
+                <label for="champ-email" class="form-label">
+                  Votre e-mail <span class="requis" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="champ-email"
+                  name="email"
+                  class="form-input"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-invalid="false"
+                  placeholder="jean@exemple.com"
+                />
+                <span id="err-email" class="form-erreur" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Champ Message -->
+              <div class="form-champ">
+                <label for="champ-message" class="form-label">
+                  Votre message <span class="requis" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="champ-message"
+                  name="message"
+                  class="form-input form-textarea"
+                  required
+                  aria-required="true"
+                  aria-invalid="false"
+                  placeholder="Parlez-moi de votre projet ou opportunité…"
+                ></textarea>
+                <span id="err-message" class="form-erreur" role="alert" aria-live="polite"></span>
+              </div>
+
+              <p class="form-note">
+                <span class="requis">*</span> Champs obligatoires.
+                Vos données ne seront utilisées qu'à des fins de réponse.
+              </p>
+
+              <button type="submit" id="btn-envoyer" class="btn-cta btn-submit">
+                Envoyer le message
+              </button>
+            </form>
+
+            <!-- Message de succès (masqué par défaut) -->
+            <div
+              id="msg-succes"
+              class="msg-succes"
+              hidden
+              tabindex="-1"
+              role="status"
+              aria-live="polite"
+            >
+              <div class="msg-succes-icone" aria-hidden="true">✉️</div>
+              <p class="msg-succes-titre">Message envoyé !</p>
+              <p class="msg-succes-texte">
+                Merci pour votre message. Je vous répondrai dans les meilleurs délais.<br>
+                En attendant, retrouvez-moi sur LinkedIn ou GitHub.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--
+       PIED DE PAGE
+  -->
+  <footer class="pied-de-page" role="contentinfo">
+    <div class="conteneur pied-inner">
+
+      <a href="#accueil" class="pied-logo" aria-label="Chantal Kamin Kanund — retour en haut">
+        Chantal<span class="logo-point">.</span>
+      </a>
+
+      <nav class="pied-nav" aria-label="Navigation pied de page">
+        <a href="#accueil"     class="lien-pied">Accueil</a>
+        <a href="#apropos"     class="lien-pied">À propos</a>
+        <a href="#competences" class="lien-pied">Compétences</a>
+        <a href="#projets"     class="lien-pied">Projets</a>
+        <a href="#contact"     class="lien-pied">Contact</a>
+      </nav>
+
+      <div class="reseaux" aria-label="Réseaux sociaux">
+        <a href="mailto:Shantykanund@gmail.com" class="reseau-lien" aria-label="Envoyer un e-mail à Chantal">E-mail</a>
+  
+      </div>
+
+      <p class="pied-copyright">
+        © 2026 Chantal Kamin Kanund · Apprendre. Innover. Construire.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Script (defer : s'exécute après le parsing du DOM) -->
+  <script src="js/app.js" defer></script>
+
+</body>
+</html>
